@@ -1,0 +1,87 @@
+/* ============================================================
+   BRUTAL — neo-brutalist
+   Cream ground, fat black frames, hard offset shadows, yellow
+   pops. Loud, confident, a little cheeky — the anti-generic.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #fdf8ec;
+  --ink: #14120d;
+  --muted: #5c5749;
+  --line: #14120d;
+  --card: #ffffff;
+  --accent: #ffd23f;
+  --accent-ink: #14120d;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 5px 5px 0 #14120d;
+  --border: 2px;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-num: "Space Grotesk", sans-serif;
+  --label-transform: uppercase;
+  --label-tracking: .05em;
+  --label-weight: 700;
+}
+
+html { color-scheme: light; }
+
+h1 {
+  font-weight: 700; font-size: 1.5rem; letter-spacing: -.02em;
+  background: var(--accent); border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 12px 16px; margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+
+.tabs { gap: 10px; }
+.tab {
+  border: 2px solid var(--ink); border-radius: var(--radius);
+  background: var(--card); color: var(--ink);
+  font-size: .85rem; font-weight: 700;
+  padding: 12px 4px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.tab:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.tab:hover { background: #fff3c4; }
+.tab.active { background: var(--accent); }
+
+.card, .result { border: 2px solid var(--ink); border-radius: var(--radius-lg); box-shadow: var(--shadow); padding: 18px 16px; }
+.card h2 { font-weight: 700; font-size: 1rem; }
+
+.note { background: #fff3c4; border: 1.5px solid var(--ink); border-radius: var(--radius); padding: 10px 12px; font-size: .72rem; }
+
+input, select { border: 2px solid var(--ink); border-radius: var(--radius); font-weight: 500; }
+input:focus, select:focus { outline: 3px solid var(--accent); outline-offset: 1px; }
+
+.line { border-bottom: 2px dotted #c9c2ae; }
+.line .v { font-weight: 700; }
+.big {
+  font-weight: 700; font-size: 1.75rem;
+  display: block; width: fit-content; margin: 0 auto;
+  background: var(--accent); border: 2px solid var(--ink);
+  border-radius: var(--radius); padding: 6px 18px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.biglabel { font-weight: 700; text-transform: var(--label-transform); letter-spacing: .08em; }
+
+.stat {
+  background: var(--card); border: 2px solid var(--ink);
+  border-radius: var(--radius);
+}
+.stat .l { letter-spacing: .05em; }
+
+th { border-bottom: 2px solid var(--ink); }
+td, th { border-bottom: 1.5px solid #e4dcc6; }
+#cmp-table td { font-weight: 500; }
+
+summary { color: var(--ink); }
+summary::before { content: "→ "; color: var(--accent); }
+.fb a {
+  border: 2px solid var(--ink); border-radius: 999px;
+  background: var(--card); color: var(--ink); font-weight: 700;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.fb a:hover { background: var(--accent); color: var(--ink); }
+.disclaimer a { color: var(--ink); font-weight: 700; text-decoration: underline; }

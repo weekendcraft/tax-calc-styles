@@ -1,0 +1,78 @@
+/* ============================================================
+   SWISS — international typographic style
+   White ground, black type, one red. Zero radius, hard rules,
+   mono numerals. Josef Müller-Brockmann does payroll.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --muted: #6e6e6e;
+  --line: #111111;
+  --card: #ffffff;
+  --accent: #e2231a;
+  --accent-ink: #ffffff;
+  --radius: 0px;
+  --radius-lg: 0px;
+  --shadow: none;
+  --border: 1px;
+  --font-display: "Archivo", "Helvetica Neue", sans-serif;
+  --font-body: "Archivo", "Helvetica Neue", sans-serif;
+  --font-num: "IBM Plex Mono", Menlo, monospace;
+  --label-transform: uppercase;
+  --label-tracking: .1em;
+  --label-weight: 700;
+}
+
+html { color-scheme: light; }
+
+body { padding-top: 28px; }
+
+h1 {
+  font-weight: 900; font-size: 1.9rem; letter-spacing: -.03em;
+  text-transform: uppercase; line-height: 1.05;
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 10px; margin-bottom: 16px;
+}
+
+/* tabs: hard black frames, red when active */
+.tabs { gap: 6px; }
+.tab {
+  border: 1px solid var(--ink); border-radius: 0;
+  background: var(--card); color: var(--ink);
+  font-size: .8rem; font-weight: 700;
+  text-transform: var(--label-transform); letter-spacing: var(--label-tracking);
+  padding: 12px 4px;
+}
+.tab:hover { background: #f2f2f2; }
+.tab.active { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+.card, .result { border: 1px solid var(--ink); border-radius: 0; box-shadow: none; padding: 16px; }
+.card h2 { text-transform: uppercase; letter-spacing: .08em; font-weight: 900; font-size: .85rem; }
+
+.note { border-left: 3px solid var(--accent); padding-left: 10px; font-size: .72rem; }
+
+input, select { border: 1px solid var(--ink); border-radius: 0; }
+input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -2px; border-color: transparent; }
+
+.line { border-bottom: 1px solid #ddd; }
+.line .v { font-weight: 600; }
+.big { font-family: var(--font-num); font-weight: 600; font-size: 1.55rem; color: var(--ink); }
+.biglabel { text-transform: var(--label-transform); letter-spacing: .12em; font-weight: 700; }
+
+.stat {
+  background: var(--card); border: 1px solid var(--ink);
+  border-radius: 0; text-align: left; padding: 10px 12px;
+}
+.stat .v { font-family: var(--font-num); font-weight: 600; }
+.stat .l { letter-spacing: .08em; }
+
+th { border-bottom: 2px solid var(--ink); }
+td, th { border-bottom: 1px solid #ddd; }
+#cmp-table td { font-family: var(--font-num); font-size: .76rem; }
+
+summary { color: var(--accent); text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; }
+.fb a { border-radius: 0; border: 1px solid var(--ink); background: var(--card); font-weight: 700; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+.fb a:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.disclaimer a { color: var(--accent); }
