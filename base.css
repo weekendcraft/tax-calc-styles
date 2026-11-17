@@ -138,6 +138,7 @@ input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 0;
 }
 
 /* --- compare table --- */
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 #cmp-table { font-size: .8rem; }
 table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: .8rem; }
 td, th { padding: 6px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
